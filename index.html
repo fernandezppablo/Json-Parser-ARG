@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Json Parser Online</title>
-    <meta name="keywords" content="JSON,javascript object notation,parser,parseur,online,tool,free,javascript,tree,treeview,tree view,post,syntax highlighting,парсер,解析器,محلل جسون">
-    <meta name="description" content="Analyze your JSON string as you type with an online Javascript parser, featuring tree view and syntax highlighting. Processing is done locally: no data send to server.">
-    <meta name="author" content="Olivier Cuenot">
-    <meta name="author" content="Cracked by HKLCF">
+    <meta name="keywords" content="JSON parser, online JSON tool, JSON tree view, JSON syntax highlighting, free JSON parser,analizador JSON, herramienta JSON en línea, vista de árbol JSON, resaltado de sintaxis JSON, analizador JSON gratis,json,format json">
+    <meta name="description" content="Analyze and beautify your JSON strings with our online JSON parser. Featuring tree view, syntax highlighting, and local processing.">
+    <meta name="author" content="NH"> 
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <link rel="icon" href="favicon/valid.png" id="favicon">
@@ -22,30 +21,30 @@
             </div>
         </div>
     </div>
-</head>
-<body class="beautify">
-    <div class="ui-editor">
-        <textarea class="ui-field json" id="editor" spellcheck="false" contenteditable="true">{"ID":null,"name":"Doe","first-name":"John","age":25,"hobbies":["reading","cinema",{"sports":["volley-ball","badminton"]}],"address":{}}</textarea>
-        <div class="ui-resizer"></div>
+</div>
+<div class="ui-editor">
+    <textarea class="ui-field json" id="editor" spellcheck="false" contenteditable="true">{"ID":null,"name":"Doe","first-name":"John","age":25,"hobbies":["reading","cinema",{"sports":["volley-ball","badminton"]}],"address":{}}</textarea>
+    <div class="ui-resizer"></div>
+</div>
+<div class="ui-aside">
+    <div class="ui-notification" id="status"></div>
+    <div class="ui-treeview json" id="result"></div>
+    <div class="ui-searchbar">
+        <div style="position: absolute"></div>
     </div>
-    <div class="ui-aside">
-        <div class="ui-notification" id="status"></div>
-        <div class="ui-treeview json" id="result"></div>
-        <div class="ui-searchbar">
-            <div style="position: absolute"></div>
-        </div>
-    </div>
-    <div class="popup-container">
-        <div class="popup-centerer">
-            <div class="popup">
-                <div class="main">
-                    <p>Este proyecto es un fork de <a href="https://github.com/hklcf/Json-Parser-Online-Nulled" target="_blank">Json-Parser-Online-Nulled by olivier cuenot</a></p>
-                    <p>Licencia: <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU General Public License v3.0</a></p>
-                </div>
-                
+</div>
+<div class="popup-container">
+    <div class="popup-centerer">
+        <div class="popup">
+             
+            <div class="third">
+                <p>Este proyecto es un fork de <a href="https://github.com/hklcf/Json-Parser-Online-Nulled" target="_blank">Json-Parser-Online-Nulled</a></p>
+                <p>Licencia: <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU General Public License v3.0</a></p>
             </div>
+            <img src="img/avatar.png" alt="Avatar">
         </div>
     </div>
-    <script src="script.js" async=""></script>
+</div>
+<script src="script.js" async=""></script>
 </body>
 </html>

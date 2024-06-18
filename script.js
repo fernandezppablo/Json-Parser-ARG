@@ -1,16 +1,26 @@
 (function() {
     'use strict';
+    
     var typeOf = function(variable) {
         return typeof eval(variable)
     };
-    /* Cracked by HKLCF
-  if(top!=window)
-		{
-		top.location.replace('http://json.parser.online.fr');
-		return
-	}
-  */
+
+  
+    
     (function() {
+
+        document.getElementById('change-quotes').addEventListener('click', function() {
+            var editor = document.getElementById('editor');
+            var text = editor.value;
+    
+            // Toggle quotes
+            var newText = text.replace(/"/g, '§').replace(/'/g, '"').replace(/§/g, "'");
+            
+            editor.value = newText;
+            
+            // Re-validate JSON
+            analyze();
+        });
         var favicon = 'favicon',
             online = 'online',
             $status = document.getElementById('status'),
@@ -26,11 +36,13 @@
             event_keyup = 'keyup',
             event_click = 'click',
             root = 'http' + semicolumn + slash + slash + json + dot + parser + dot + online + dot + fr + slash;
+        
         for (var i = 0, nodes = document.querySelectorAll('.ui-option'), node; node = nodes[i]; i++) {
             node.addEventListener(event_click, function() {
                 document.querySelector('body').classList.toggle(this.id)
             }, false)
         }
+
         (function() {
             var popupContainer = document.querySelector('.popup-container'),
                 popup = document.querySelector('.popup');
@@ -47,6 +59,7 @@
                 popup.classList.add('bitcoin')
             })
         })();
+
         (function() {
             $result.addEventListener(event_click, function(ev) {
                 var clickedElement = ev.target;
@@ -55,8 +68,10 @@
                 }
             }, false)
         })();
+
         (function() {
-            var startX, startY, startWidth, startHeight, startHeight2, resizableElement = document.querySelector('.ui-editor'),
+            var startX, startY, startWidth, startHeight, startHeight2, 
+                resizableElement = document.querySelector('.ui-editor'),
                 resizableElement2 = document.querySelector('.ui-aside'),
                 resizer = document.querySelector('.ui-resizer'),
                 doDrag = function(e) {
@@ -79,6 +94,7 @@
                     document.removeEventListener('mouseup', stopDrag, false);
                     resizer.classList.remove('resizing')
                 };
+            
             resizer.addEventListener('mousedown', function(e) {
                 startX = e.clientX;
                 startY = e.clientY;
@@ -89,6 +105,7 @@
                 document.addEventListener('mousemove', doDrag, false);
                 document.addEventListener('mouseup', stopDrag, false)
             }, false);
+
             window.addEventListener('resize', function() {
                 resizableElement.style.width = '';
                 resizableElement.style.height = '';
@@ -366,18 +383,7 @@
             }
             return result
         }
-        /* Cracked by HKLCF
-  if((document.location+'').search(root)!==0)
-		{
-		parse=function()
-			{
-			return
-				{
-				html:'',valid:true
-			}
-		};
-		return
-	}*/
+
         function analyze() {
             function trim(s) {
                 var whitespace = "[\\x20\\t\\r\\n\\f]",
@@ -417,15 +423,7 @@
         $editor.addEventListener(event_keyup, analyze, false);
         $editor.addEventListener(event_click, analyze, false);
         analyze();
-        /* Cracked by HKLCF
-	if(root.length!==22+favicon.length)
-		{
-		analyze=function()
-			{
-		};
-		return
-	}
-  */
         $editor.select()
     })()
 })();
+

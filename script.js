@@ -1,15 +1,17 @@
 (function() {
     'use strict';
     
-    var typeOf = function(variable) {
-        analyze(); 
+    var typeOf = function(variable) { 
         return typeof eval(variable)
     };
 
   
     
     (function() {
-        
+        document.addEventListener('DOMContentLoaded', (event) => {
+            analyze();
+        });
+
 
         document.getElementById('change-quotes').addEventListener('click', function() {
             var editor = document.getElementById('editor');

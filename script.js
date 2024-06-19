@@ -10,6 +10,7 @@
     (function() {
         document.addEventListener('DOMContentLoaded', (event) => {
             analyze();
+            analyze();
         });
 
 

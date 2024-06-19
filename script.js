@@ -2,13 +2,14 @@
     'use strict';
     
     var typeOf = function(variable) {
+        analyze(); 
         return typeof eval(variable)
     };
 
   
     
     (function() {
-        analyze();
+        
 
         document.getElementById('change-quotes').addEventListener('click', function() {
             var editor = document.getElementById('editor');

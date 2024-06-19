@@ -8,6 +8,7 @@
   
     
     (function() {
+        analyze();
 
         document.getElementById('change-quotes').addEventListener('click', function() {
             var editor = document.getElementById('editor');

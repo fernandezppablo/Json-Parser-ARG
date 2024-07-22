@@ -1,52 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7568602227895497"
- crossorigin="anonymous"></script>
 <head>
-    <meta charset="utf-8">
-    <title>Json Parser Online</title>
-    <meta name="keywords" content="JSON parser, online JSON tool, JSON tree view, JSON syntax highlighting, free JSON parser,analizador JSON, herramienta JSON en línea, vista de árbol JSON, resaltado de sintaxis JSON, analizador JSON gratis,json,format json">
-    <meta name="description" content="Analyze and beautify your JSON strings with our online JSON parser. Featuring tree view, syntax highlighting, and local processing.">
-    <meta name="author" content="NH"> 
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link rel="icon" href="favicon/valid.png" id="favicon">
-    <link rel="stylesheet" href="style.css">
-    <div class="ui-menu">
-        <div class="ui-menu-dropdown">
-            <div class="ui-header">
-                <button class="ui-option" id="beautify">Formatear</button>
-                <button class="ui-option" id="show-types">Tipos de Datos</button>
-                <button class="ui-option" id="show-indexes">Indices</button>
-                <button class="ui-option" id="change-quotes">Alternar Comillas</button>
-                <button class="ui-option about">About</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="ui-editor">
-    <textarea class="ui-field json" id="editor" spellcheck="false" contenteditable="true">{"ID":null,"name":"Doe","first-name":"John","age":25,"hobbies":["reading","cinema",{"sports":["volley-ball","badminton"]}],"address":{}}</textarea>
-    <div class="ui-resizer"></div>
-</div>
-<div class="ui-aside">
-    <div class="ui-notification" id="status"></div>
-    <div class="ui-treeview json" id="result"></div>
-    <div class="ui-searchbar">
-        <div style="position: absolute"></div>
-    </div>
-</div>
-<div class="popup-container">
-    <div class="popup-centerer">
-        <div class="popup">
-             
-            <div class="third">
-                <p>Este proyecto es un fork de <a href="https://github.com/hklcf/Json-Parser-Online-Nulled" target="_blank">Json-Parser-Online-Nulled</a></p>
-                <p>Repositorio: <a href="https://github.com/fernandezppablo/Json-Parser-ARG" target="_blank">Github</a></p>
-            </div>
-            <img src="img/avatar.png" alt="Avatar">
-        </div>
-    </div>
-</div>
-<script src="script.js" async=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Parser and Utilities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 5px 10px;
+        }
+        #output {
+            white-space: pre-wrap;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Parser and Utilities</h1>
+    
+    <h2>Input JSON</h2>
+    <textarea id="jsonInput" placeholder="Enter your JSON here..."></textarea>
+    
+    <button onclick="parseJSON()">Parse JSON</button>
+    <button onclick="formatJSON()">Format JSON</button>
+    <button onclick="minifyJSON()">Minify JSON</button>
+    
+    <h2>Output</h2>
+    <pre id="output"></pre>
+
+    <script>
+        function parseJSON() {
+            const input = document.getElementById('jsonInput').value;
+            try {
+                const parsed = JSON.parse(input);
+                document.getElementById('output').textContent = JSON.stringify(parsed, null, 2);
+            } catch (error) {
+                document.getElementById('output').textContent = 'Error: ' + error.message;
+            }
+        }
+
+        function formatJSON() {
+            const input = document.getElementById('jsonInput').value;
+            try {
+                const parsed = JSON.parse(input);
+                document.getElementById('output').textContent = JSON.stringify(parsed, null, 2);
+            } catch (error) {
+                document.getElementById('output').textContent = 'Error: ' + error.message;
+            }
+        }
+
+        function minifyJSON() {
+            const input = document.getElementById('jsonInput').value;
+            try {
+                const parsed = JSON.parse(input);
+                document.getElementById('output').textContent = JSON.stringify(parsed);
+            } catch (error) {
+                document.getElementById('output').textContent = 'Error: ' + error.message;
+            }
+        }
+    </script>
 </body>
 </html>
